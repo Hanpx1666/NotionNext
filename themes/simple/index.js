@@ -8,6 +8,7 @@ import { Transition } from '@headlessui/react'
 import dynamic from 'next/dynamic'
 import SmartLink from '@/components/SmartLink'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 import { createContext, useContext, useEffect, useRef } from 'react'
 import BlogPostBar from './components/BlogPostBar'
 import CONFIG from './config'
@@ -72,6 +73,9 @@ const LayoutBase = props => {
 
   return (
     <ThemeGlobalSimple.Provider value={{ searchModal }}>
+      <Head>
+        <title>Han's Blog</title>
+      </Head>       
       <div
         id='theme-simple'
         className={`${siteConfig('FONT_STYLE')} min-h-screen flex flex-col dark:text-gray-300  bg-white dark:bg-black scroll-smooth`}>
