@@ -5,7 +5,7 @@ const { extractLangPrefix } = require('./lib/utils/pageId')
 const { isExport } = require('./lib/utils/buildMode')
 const { getStaticPageGenerationTimeoutSec } = require('./lib/build/buildEnv')
 
-// 打包时是否分析代码
+// 打包时是否分析代码/
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: BLOG.BUNDLE_ANALYZER
 })
@@ -203,6 +203,10 @@ const nextConfig = {
   // 性能优化配置
   compress: true,
   poweredByHeader: false,
+  env: {
+  NEXT_PUBLIC_TITLE: "Han's Blog",
+  NEXT_PUBLIC_DESCRIPTION: "A site powered by NotionNext",
+},
   generateEtags: true,
 
   // 构建优化
