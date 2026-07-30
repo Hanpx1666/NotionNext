@@ -6,3 +6,17 @@
 .fa-info:before {
     content: "\f05a";
 }
+/* ===== 强制全站字体为 Noto Serif SC ===== */
+html, body, div, p, h1, h2, h3, h4, h5, h6,
+span, a, article, section, main, header, footer,
+.notion-text, .notion-title, .notion-page-content,
+.prose, .prose p, .prose h1, .prose h2, .prose h3 {
+    font-family: "Noto Serif SC", "Noto Serif", "Times New Roman", serif !important;
+}
+
+/* 针对博客文章内容的额外覆盖 */
+#notion-article *,
+#article-wrapper *,
+.article-content * {
+    font-family: "Noto Serif SC", "Noto Serif", "Times New Roman", serif !important;
+}
